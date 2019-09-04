@@ -1,0 +1,15 @@
+Options:
+1. press '+' to add
+2. press '-' to sub
+3. press '*' to Mul
+4. press '/' to Div
+
+Select : +
+
+Enter two numbers:
+4
+5
+The Addition result is 9.
+
+
+case '+':

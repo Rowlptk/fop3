@@ -1,0 +1,22 @@
+Q1. Generate even numbers from 1 to 30.
+
+Q2. Generate multiple of 3 but multiple of 9 is not allowed.
+
+Q3. swap two variables
+
+Q4. Area of Circle: Pi*r*r; ==> 3.1415*2*2 = 12.something
+
+Enter a diameter: 4
+
+Area of circle is : 12.57
+
+Hint:
+float ==> %f
+d
+r = d/2
+A = 3.1415*r*r;
+
+
+
+
+
