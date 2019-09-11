@@ -1,0 +1,19 @@
+This isss a House
+
+this isss a house
+
+thith ithth a houthe
+
+s or ss ==> th
+
+string paudaina
+
+hint:
+
+while(ch!="\n")
+{
+    ch = getchar();
+    ch = tolower(ch);
+    putchar(ch);
+}
+
