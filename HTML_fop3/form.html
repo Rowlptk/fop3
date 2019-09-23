@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form and Inputs</title>
+    <style>
+        form{
+            border:2px solid red;
+            width:30%;
+            height: 250px;
+            padding-left: 20px;
+            margin-left:350px;
+            margin-top:200px;
+        }
+    
+    </style>
+</head>
+<body>
+    <!-- other input types -->
+    <textarea cols="30" rows="10">
+        qwerty
+    </textarea>
+    <br>
+    <!-- select -->
+    <label for="">Subject</label>
+        <select>
+                <option value="IELTS">IELTS</option>
+                <option value="TOEFL" selected>TOEFL</option>
+                <option value="PTE">PTE</option>
+                <option value="GRE">GRE</option>
+                <option value="SAT">SAT</option>
+        </select>
+    <!-- number    -->
+        <label>Age: </label>
+        <input type="number">
+
+    <!-- date  -->
+    <label for="">DOB: </label>
+    <input type="date">
+
+    <!-- radio -->
+    <label for="">Gender</label>
+    <input type="radio" name="x">male
+    <input type="radio" name="x" checked>Female
+    <input type="radio" name="x">Other
+
+        <br>
+
+    <!-- checkbox -->
+    <label for="">Skills:</label>
+    <input type="checkbox">Networking
+    <input type="checkbox">Programming
+    <input type="checkbox">Designing
+    <input type="checkbox">Content Writing
+
+    <br>
+    <!-- file upload -->
+    <label>Choose: </label>
+    <input type="file">
+
+    <!-- color -->
+    <label for="">Pick: </label>
+    <input type="color">
+
+
+
+    <!-- form -->
+    <form>
+        <h4>Login</h4>
+        <label for="usr">Username: </label>
+        <input type="text" id="usr" placeholder="Enter your name">
+        <br><br>
+        <label for="pwd">Password: </label>
+        <input type="password" id="pwd">
+        <br><br>
+        <label for="email">Email: </label>
+        <input type="email" id="email" value="abc@example.com">
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
