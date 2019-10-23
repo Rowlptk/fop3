@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: tomato;
+            border: 2px solid black;
+            border-radius: 50%;
+            animation-name: bounce;
+            animation-duration: 100s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 1s;
+            
+            
+        }
+        @keyframes bounce
+        {
+            0%{top:0;left:0;animation-timing-function: ease-in;}
+            25%{top:83vh; left: 23vw; animation-timing-function: ease-out;}
+            50%{top:0; left: 46vw; animation-timing-function: ease-in;}
+            75%{top:83vh; left: 69vw; animation-timing-function: ease-out;}
+            100%{top:0; left: 92vw; animation-timing-function: ease-in;}
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>
