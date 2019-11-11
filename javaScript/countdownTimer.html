@@ -1,0 +1,43 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>count down timer</title>
+</head>
+<body onload="setInterval(myTimer,1);">
+    <h1>timer</h1>
+    <script>
+        function myTimer()
+        {
+            var final = new Date(2020,0,1,0,0,0,0);
+            var curr = new Date();
+            final = final.getTime(); // 1970 january 1 ==> 0
+            curr = curr.getTime();
+            // alert(final);
+            // alert(curr);
+            rem = final-curr;
+            // alert(rem);
+                // ms/1000 ==> s/60 ==> m/60 ==> h/24 ==> d
+            if (rem >= 0){
+                var day = Math.floor(rem/(24*60*60*1000));
+                rem = rem%(24*60*60*1000);
+                var hr = Math.floor(rem/(60*60*1000));
+                rem = rem%(60*60*1000);
+                var m = Math.floor(rem/(60*1000));
+                rem = rem%(60*1000);
+                var s = Math.floor(rem/1000);
+                var ms = rem%1000;
+                document.querySelector('h1').innerHTML = 
+                `${day} Day ${hr} hours ${m} minutes ${s} seconds ${ms} milliseconds`;
+            }
+            else{
+                document.querySelector('h1').innerHTML = 'Timer Expired!';
+            }    
+        }
+    
+    </script>
+
+</body>
+</html>
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dice Roll</title>
+</head>
+<body>
+    <!-- Math.random() ==> 0 to 1 
+    0.1 *6 ==> 0.6 ==> 1
+    0.9 *6 ==> 5.4 ==> 6
+    -->
+
+    <button id="d1"> 0 </button>
+    <button id="d2"> 0 </button>
+    <button onclick="roll();"> Roll </button>
+
+    <h1> 0 + 0 = 0 </h1>
+    <p style="color:red;display:none;" >Congratulations! You got a jackpot.</p>
+    <script>
+        function roll(){
+            var d1 = Math.ceil(Math.random()*6);
+            var d2 = Math.ceil(Math.random()*6);
+            var res = d1+d2;
+            document.querySelector('#d1').innerHTML = d1;
+            document.querySelector('#d2').innerHTML = d2;
+            document.querySelector('h1').innerHTML = d1 + ' + ' + d2 + ' = ' + res;
+            if(d1==6 && d2==6)
+            {
+                document.querySelector('p').style.display = "block";
+            }
+            else{
+                document.querySelector('p').style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

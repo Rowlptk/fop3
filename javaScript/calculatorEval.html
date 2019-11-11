@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eval</title>
+</head>
+<body>
+    <input type="text" id="in1" placeholder="enter numerical expression">
+    <button onclick="calculate();">Evaluate</button>
+
+    <script>
+        function calculate()
+        {
+            var exp = document.getElementById('in1').value;
+            var res = eval(exp);    // exp==> "2+2", res ==> eval("2+2") ==> 4;
+            document.getElementById('in1').value = res;
+        }
+    
+    </script>
+</body>
+</html>

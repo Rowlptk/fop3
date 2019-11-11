@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eval</title>
+</head>
+<body>
+    
+    <input type="text" id="ip1" placeholder="Input number expression">
+
+    <button onclick="calc();"> = </button>
+
+    <!-- ondblclick, onmouserover, onmouseleave, onmousewheel -->
+
+    <script>
+        function calc()
+        {
+            var exp = document.getElementById('ip1').value; // exp = "2+2*3"
+            var res = eval(exp);                            // res = eval("2+2*3") ==> 8
+            document.getElementById('ip1').value = res;
+        }
+    
+    </script>
+</body>
+</html>

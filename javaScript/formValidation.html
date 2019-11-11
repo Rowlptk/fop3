@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form>
+        username : <input type="text">
+        <br><br>
+        password : <input type="password" id="pwd">
+        <span></span>
+        <br><br>
+        <button type="button" onclick="myView();" id="b1"> view </button>
+        <button type="button" onclick="myCheck();">check</button>
+    </form>
+
+    <script>
+        function myView()
+        {
+            var typ = document.querySelector('#pwd').type;
+            if( typ == 'password')
+            {
+                document.querySelector('#pwd').type = 'text';
+                document.querySelector('#b1').innerHTML = 'hide';
+            }
+            else{
+                document.querySelector('#pwd').type = 'password';
+                document.querySelector('#b1').innerHTML = 'view';
+            }
+        }
+
+
+        // bootstrap 3 ==> 3 days
+        // mixture of html css and js ==> class ==> class= "table"
+
+
+        function myCheck()
+        {
+            var pwd = document.querySelector('#pwd').value;
+            var patt = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@!\^&\$\*])(?=.{8,})/;
+            var check = patt.test(pwd);
+            if(check)
+            {
+                document.querySelector('span').innerHTML = 'valid';
+                document.querySelector('span').style.color = 'green';
+            }
+            else
+            {
+                document.querySelector('span').innerHTML = 'invalid';
+                document.querySelector('span').style.color = 'red';
+            }
+        }
+    
+    </script>
+</body>
+</html>

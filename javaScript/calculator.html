@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+    <input type="text" id="num1" placeholder="number 1">
+    <br><br>
+    <input type="text" id="num2" placeholder="number 2">
+    <br><br>
+    <button onclick="add();"> + </button>
+    <input type="text" id="q1">
+    <button onclick="evaluate2();">x</button>
+    <h1></h1>
+
+    <script>
+        function add(){
+            var num1 = parseInt(document.getElementById('num1').value);
+            var num2 = parseInt(document.getElementById('num2').value);
+            var res = num1 + num2;
+            document.querySelector('h1').innerHTML = "The result is : " + res;
+            document.querySelector('h1').style.color = 'red';
+        }
+        function evaluate2()
+        {
+            var evaluate1 = document.getElementById("q1").value;
+            document.getElementById("q1").value = eval(evaluate1);
+        }
+
+    </script>
+
+</body>
+</html>
