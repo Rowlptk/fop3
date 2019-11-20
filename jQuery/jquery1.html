@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div>  
+        <h1 id="h1">This is a heading tag</h1>
+
+        <p>This is a paragraph</p>
+
+        <input type="text" id="x">
+
+        <h1 id="h">This is a text</h1>
+    </div>
+
+    <button id="hide">Hide</button>
+    <button id="show" >Show</button>
+    <button id="tog">Toggle</button>
+    <br><br>
+    <button id="fIn">fade In</button>
+    <button id="fOut">fade Out</button>
+    <button id="ftog">fade Toggle</button>
+    <!-- click, dblclick, mouseeneter, mouseleave, keypress, keydown, keyup, blur, focus -->
+    <script>
+        $(document).ready(function(){
+           $('#fIn').click(function(){
+                $('div').fadeIn(10000);
+           });
+
+           $('#fOut').click(function(){
+               $('div').fadeOut(10000);
+           })
+
+           $('#ftog').click(function(){
+               $('div').fadeToggle(5000);
+           })
+
+            $('#hide').click(function(){
+                $('div').hide(1000);
+            });
+
+            $('#show').click(function(){
+                $('div').show(2000);
+            });
+
+            $('#tog').click(function(){
+                $('div').toggle(500);
+            })
+
+
+
+
+           $('#h').on({
+               click : function(){
+                   $(this).css("font-size","50px");
+               },
+
+               mouseenter : function(){
+                   $(this).css("color","red");
+               },
+
+               mouseleave : function(){
+                   $(this).css("color","green");
+               },
+
+               dblclick: function(){
+                   $(this).css("font-size","32px")
+               }
+           })
+           
+           
+           
+           
+           
+           
+           
+           
+            $('#h1').click(function(){
+                $(this).hide();
+            });
+
+            $('p').mouseenter(function(){
+                $(this).css("color","red");
+                $('#h1').show();
+            }) 
+            
+            $('input').keypress(function(){
+                $(this).css("background-color","green");
+            })
+
+            $('input').blur(function(){
+                $('input').css("background-color","red");
+            })
+        });
+    </script>
+
+
+</body>
+</html>
