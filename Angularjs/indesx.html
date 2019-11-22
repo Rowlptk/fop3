@@ -1,0 +1,34 @@
+<!-- Angularjs is a javaScript framework -->
+<!-- single page web Application(SPA) -->
+<!-- multiple page navigation in a single page -->
+<!-- MVC ==> Model(data), view(presentation) , controller(data-controll) -->
+<!-- CDN(w3Schools) , Download(angularjs.org) -->
+<!-- ng- (prefix) -->
+<!-- unique -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angularjs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <!-- directives ng-name -->
+    <input type="text" ng-model="data">
+    <h1 ng-bind="data"></h1>
+    <p>My name is {{data}}</p>
+    <h2>{{today}}</h2>
+    
+    // 2 class, sql ==> 2
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl',function($scope){
+            $scope.today = new Date();
+            $scope.data = 'X-men';
+        });
+    </script>
+</body>
+</html>

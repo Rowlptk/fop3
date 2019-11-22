@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slide Effects</title>
+    <style>
+        #div1{
+            border: 2px solid red;
+            background-color: blueviolet;
+        }
+        #div2{
+            border: 2px solid green;
+            background-color: chartreuse;
+            display: none;
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    
+    <div id="div1">Click to Slide</div>
+
+    <div id="div2">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+         Repudiandae quaerat veritatis corrupti voluptatem, nulla cumque, 
+         voluptatibus dolore eligendi et ipsa aut vero officiis ab consectetur 
+         nihil cupiditate eaque laudantium neque?
+    </div>
+    <!-- slideDown, SlideUp, SlideToggle -->
+    <script>
+        $(document).ready(function(){
+            $('#div1').click(function(){
+                $('#div2').slideToggle(5000);
+            });
+        });
+    </script>
+</body>
+</html>

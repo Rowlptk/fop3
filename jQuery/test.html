@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script> 
+
+$(document).ready(function(){
+    var count = 1;
+    $("button").click(function loop(){
+        if(count<=3)
+        {
+            var div = $("div");
+            div.animate({height: '300px', opacity: '0.4'}, "slow");
+            div.animate({width: '300px', opacity: '0.8'}, "slow");
+            div.animate({height: '100px', opacity: '0.4'}, "slow");
+            div.animate({width: '100px', opacity: '0.8'}, "slow");
+            count++;
+            loop();
+        }
+    });
+});
+</script> 
+
+</head>
+<body>
+    <div style="height:100px; width:100px; background-color:red;"></div>
+    <button>click</button>
+    </body>
