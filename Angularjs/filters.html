@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filters</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    
+<!-- alphabetical filters  -->
+<h2>{{ upper | uppercase }}</h2>
+<h2>{{lower | lowercase }}</h2>
+
+<!-- currency filter -->
+<h2>{{ curr | currency }}</h2>
+<h2>{{ curr*115.12 | currency:"Nrs " }}</h2>
+<h2>{{ curr*0.78 | currency:"&pound; " }}</h2>
+
+<!-- Date filter -->
+<h2>{{today | date: "MM.d.y"}}</h2>
+<!-- shortdate, longdate, mediumdate, MM.d.y -->
+
+<!-- search filter -->
+<input type="text" ng-model="mysearch">
+<ul>
+    <li ng-repeat = "x in liv | filter:mysearch">{{x}}</li>
+</ul>
+
+<!-- fundamentals -->
+<!-- form-validation in angular, $dirty, $touched, $valid, $invalid, $pristine, $error, .ng-valid -->
+<!-- angular routing, ==> gmail, SPA ==>  navigation -->
+
+<!-- sql queries ==>  tables, database, joins, views, stored procedure, triggers, error handling -->
+
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl',function($scope){
+            $scope.upper = "uppercase";
+            $scope.lower = "LowerCase";
+            $scope.curr = 100;
+            $scope.today = new Date();
+            $scope.liv = ['Tree', 'Bird', 'Lion', 'Human', 'Cow', 'Elephant', 'Dolphin', 'Lizard', 'Mosquito', 'Snake'];
+        });
+    </script>
+</body>
+</html>

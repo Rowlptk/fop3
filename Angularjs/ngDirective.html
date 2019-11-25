@@ -1,0 +1,58 @@
+<!-- ng-app, ng-model, ng-controller, ng-bind ==> directives -->
+<!-- ng-init, ng-hide, ng-show, ng-include, ng-repeat, filters -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+</head>
+<body ng-app="myApp">
+
+    <p> Please Check to view the content </p>
+    <input type="checkbox" ng-model="check">
+    <div ng-show = "check" >
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam praesentium iste recusandae
+             error quisquam. Corrupti nam magni porro molestias velit similique aperiam blanditiis repellat
+              iure quia? Ut tempore veritatis alias!
+        </p>
+    </div>
+
+    <div ng-hide = "check" >
+        <p>this is a text that needs to hide.</p>
+    </div>
+
+    <div ng-controller="myCtrl">
+        <input type="text" ng-model="input1" ng-init="input1 = 'x-men'">
+        <br><br>
+        <input type="text" ng-model="input2">
+
+        <h1>{{ exp }}</h1>
+    </div>
+        <input type="text" ng-model="input3">
+
+        <div ng-include="'welcome.html'" style="border:2px solid black;"></div>
+        <hr>
+        <div ng-include="'indesx.html'" style="border:2px solid black;"></div>
+        <hr>
+
+    <div ng-controller = "myCtrl1">
+        <ul>
+            <li ng-repeat="x in liv">{{x}}</li>
+        </ul>
+    </div>  
+     
+    <script>
+        var app = angular.module('myApp',[]);
+        app.controller('myCtrl1',function($scope){
+            $scope.liv = ['Tree', 'Bird', 'Lion', 'Human', 'Cow', 'Elephant', 'Dolphin', 'Lizard', 'Mosquito', 'Snake'];
+        });
+        app.controller('myCtrl',function($scope){
+            $scope.input2 = "2020";
+            $scope.exp = "demo";
+        });
+    </script>
+</body>
+</html>
