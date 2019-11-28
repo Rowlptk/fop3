@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Validation In Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+<style>
+    #userIn.ng-valid{
+        background-color: green;
+    }
+    #userIn.ng-invalid{
+        background-color: red;
+    }
+    /* .ng-valid, .ng-invalid, .ng-pristine, .ng-dirty, .ng-touched, .ng-untouched */
+</style>
+</head>
+<body ng-app="">
+    <form name="usrForm" novalidate>
+
+        <input type="text" required placeholder="Enter anything" 
+        name="usrIn" ng-model="demo" id="userIn">
+        
+        <span>{{usrForm.usrIn.$valid}}</span>
+        <br><br>
+        <input type="submit" value="click">
+    </form>
+</body>
+</html>
+
+<!-- $valid ==> validity
+    $invalid ==> invalidity 
+    $touched ==> content written or not
+    $untouched ==> content not touched
+    $dirty ==> 
+    $pristine ==> 
+    -->

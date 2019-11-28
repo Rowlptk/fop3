@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+</head>
+<body ng-app="myApp">
+    <nav>
+        <a href="#/!">Home</a>
+        <a href="#!page1">List</a>
+        <a href="#!page2">Table</a>
+        <a href="#!page3">Form</a>
+    </nav>
+        <div style="border:2px solid black;" ng-view>
+
+        </div>
+    // sql server 2014 ==> queries ==> SSMS ==> Table, views, AdventureWorks2014 Database
+    <script>
+        var app = angular.module('myApp',['ngRoute']);
+        app.config(function($routeProvider){
+            $routeProvider
+            .when('/',{
+                templateUrl : 'main.html'
+            })
+            .when('/page1',{
+                templateUrl : 'page1.html'
+            })
+            .when('/page2', {
+                templateUrl : 'page2.html'
+            })
+            .when('/page3',{
+                templateUrl : 'page3.html'
+            });
+        });
+
+    </script>    
+
+</body>
+</html>
