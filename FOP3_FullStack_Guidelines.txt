@@ -1,0 +1,23 @@
+Full Stack Developer
+
+Front side
+
+HTML CSS(sass) (JAVAScript(vanilla) jSON API) Bootstrap 4 (react, vuejs, Angular) 
+
+Database (Mysql, MSSQL, PostgreSQL, Firebase)
+
+Back End
+(php, java, python, ASP NET(C#))
+
+(Laravel, spring, django,flask, )
+
+git bash
+
+freetutorials.us
+brad traversy ==>  Udemy Courses
+
+1. MODERN HTML & CSS FROM THE BEGINNING
+2. MODERN JAVASCRIPT FROM THE BEGINNING
+3. BOOTSTRAP 4 FROM SCRATCH WITH 5 PROJECTS
+4. REACT FRONT TO BACK 2019
+5. PYTHON DJANGO DEV TO DEPLOYMENT
